@@ -1,0 +1,43 @@
+FotoLab — pacchetto PWA (completo)
+==================================
+
+CONTENUTO
+---------
+index.html                 -> l'applicazione (tutto il codice e' qui dentro)
+manifest.webmanifest       -> dati PWA (nome FotoLab, colori, icone)
+sw.js                      -> service worker (cache offline) - versione fotolab-v1.3.0
+icons/                     -> icone con il monogramma FL
+    icon-192.png
+    icon-512.png
+    icon-maskable-192.png
+    icon-maskable-512.png
+    apple-touch-icon.png
+    icon.svg
+lib/                       -> librerie per aprire RAW e TIFF
+    dcraw.js
+    utif.js
+
+Il pacchetto e' COMPLETO: non devi aggiungere altro.
+
+COME PUBBLICARE
+---------------
+Carica l'intera cartella mantenendo questa struttura:
+
+    index.html
+    manifest.webmanifest
+    sw.js
+    icons/
+    lib/
+
+Su Vercel: trascina la cartella (o fai il deploy della repo) e sei a posto.
+
+NOTE
+----
+- Versione cache service worker: fotolab-v1.3.0. Dopo il deploy, i
+  dispositivi dove l'app era gia' installata come "Zenit" scaricano da soli
+  la nuova versione (nome e icona FotoLab). Puo' servire chiudere e
+  riaprire l'app una volta.
+- Il nome/URL del progetto su Vercel (es. foto-dun-two) e' indipendente e
+  lo cambi tu dal pannello Vercel se vuoi; non influisce sul funzionamento.
+- Tutta l'elaborazione e' locale: condividendo il link o l'app condividi
+  solo il programma, mai le tue foto.
